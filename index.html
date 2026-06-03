@@ -1,0 +1,609 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Award Mortgage helps Australian borrowers compare home loan, refinance and specialist lending options with a clear broker-led assessment."
+    />
+    <meta name="theme-color" content="#f08519" />
+    <meta property="og:site_name" content="Award Mortgage Solutions" />
+    <title>Award Mortgage Solutions | Mortgage Broker for Home Loans and Refinance</title>
+    <style>
+      :root {
+        --brand: #f08519;
+        --brand-dark: #b9540b;
+        --brand-light: #fff3e8;
+        --text: #1f2933;
+        --body: #374151;
+        --muted: #6b7280;
+        --line: #e5e7eb;
+        --soft: #f6f7f9;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        color: var(--text);
+        background: #fff;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      .wrap {
+        max-width: 1180px;
+        margin: 0 auto;
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+
+      .top {
+        border-bottom: 1px solid var(--line);
+        background: #fff;
+        position: sticky;
+        top: 0;
+        z-index: 20;
+      }
+
+      .bar,
+      .nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 24px;
+      }
+
+      .bar {
+        min-height: 36px;
+        color: var(--muted);
+        font-size: 13px;
+        font-weight: 700;
+        border-bottom: 1px solid var(--line);
+      }
+
+      .nav {
+        min-height: 76px;
+      }
+
+      .logo {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        font-size: 20px;
+        font-weight: 900;
+      }
+
+      .mark {
+        width: 42px;
+        height: 42px;
+        display: grid;
+        place-items: center;
+        background: var(--brand);
+        color: #fff;
+      }
+
+      .links {
+        display: flex;
+        align-items: center;
+        gap: 22px;
+        font-size: 15px;
+        font-weight: 800;
+      }
+
+      .nav-item {
+        position: relative;
+        min-height: 76px;
+        display: flex;
+        align-items: center;
+      }
+
+      .nav-trigger {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        min-height: 42px;
+      }
+
+      .nav-trigger::after {
+        content: "⌄";
+        color: var(--brand-dark);
+        font-size: 14px;
+        line-height: 1;
+      }
+
+      .dropdown {
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        z-index: 30;
+        transform: translateX(-50%);
+        min-width: 260px;
+        display: none;
+        flex-direction: column;
+        gap: 4px;
+        padding: 10px;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: #fff;
+        box-shadow: 0 18px 44px rgba(31, 41, 51, 0.16);
+      }
+
+      .dropdown a {
+        display: block;
+        padding: 11px 12px;
+        border-radius: 6px;
+        color: var(--text);
+        font-size: 14px;
+        font-weight: 750;
+        white-space: nowrap;
+      }
+
+      .dropdown a:hover,
+      .dropdown a:focus {
+        color: var(--brand-dark);
+        background: var(--soft);
+      }
+
+      .nav-item:hover .dropdown,
+      .nav-item:focus-within .dropdown {
+        display: flex;
+      }
+
+      .button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 48px;
+        padding: 0 22px;
+        border-radius: 8px;
+        background: var(--brand);
+        color: var(--text);
+        font-weight: 900;
+        box-shadow: 0 12px 26px rgba(31, 41, 51, 0.13);
+      }
+
+      .button.secondary {
+        background: #fff;
+        border: 1px solid var(--line);
+        box-shadow: none;
+      }
+
+      .hero,
+      .section {
+        padding-top: 76px;
+        padding-bottom: 76px;
+      }
+
+      .hero {
+        border-bottom: 1px solid var(--line);
+        background: linear-gradient(180deg, #fff, var(--soft));
+      }
+
+      .hero-grid,
+      .split {
+        display: grid;
+        grid-template-columns: 1.05fr 0.95fr;
+        gap: 48px;
+        align-items: center;
+      }
+
+      .eyebrow {
+        display: inline-flex;
+        border: 1px solid rgba(240, 133, 25, 0.28);
+        background: var(--brand-light);
+        color: var(--brand-dark);
+        border-radius: 8px;
+        padding: 9px 12px;
+        font-size: 13px;
+        font-weight: 900;
+        margin-bottom: 22px;
+      }
+
+      h1,
+      h2,
+      h3,
+      p {
+        margin-top: 0;
+      }
+
+      h1 {
+        font-size: clamp(42px, 7vw, 66px);
+        line-height: 1.04;
+        margin-bottom: 22px;
+      }
+
+      h2 {
+        font-size: clamp(31px, 4.5vw, 48px);
+        line-height: 1.12;
+        margin-bottom: 18px;
+      }
+
+      h3 {
+        font-size: 22px;
+        line-height: 1.2;
+        margin-bottom: 12px;
+      }
+
+      .lead,
+      .copy {
+        color: var(--body);
+        font-size: 19px;
+        line-height: 1.65;
+        font-weight: 650;
+      }
+
+      .lead {
+        max-width: 690px;
+        margin-bottom: 32px;
+      }
+
+      .hero-img,
+      .card-img {
+        width: 100%;
+        object-fit: cover;
+        display: block;
+      }
+
+      .hero-img {
+        height: 460px;
+        border-radius: 8px;
+        box-shadow: 0 24px 60px rgba(31, 41, 51, 0.18);
+      }
+
+      .actions,
+      .stats {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 14px;
+      }
+
+      .stats {
+        margin-top: 30px;
+      }
+
+      .stat,
+      .card,
+      .faq,
+      .table-card {
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: #fff;
+      }
+
+      .stat {
+        padding: 12px 14px;
+        font-size: 14px;
+        font-weight: 850;
+      }
+
+      .band {
+        background: var(--soft);
+        border-top: 1px solid var(--line);
+        border-bottom: 1px solid var(--line);
+      }
+
+      .dark {
+        background: var(--text);
+        color: #fff;
+      }
+
+      .dark .copy,
+      .dark p {
+        color: rgba(255, 255, 255, 0.84);
+      }
+
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 20px;
+        margin-top: 34px;
+      }
+
+      .grid.two {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .card {
+        padding: 26px;
+      }
+
+      .card p,
+      .faq p {
+        color: var(--body);
+        line-height: 1.62;
+        font-weight: 620;
+      }
+
+      .dark .card {
+        background: var(--text);
+        border-color: rgba(255, 255, 255, 0.12);
+      }
+
+      .dark .card p {
+        color: rgba(255, 255, 255, 0.84);
+      }
+
+      .icon {
+        width: 46px;
+        height: 46px;
+        display: grid;
+        place-items: center;
+        border-radius: 8px;
+        background: var(--brand-light);
+        color: var(--brand-dark);
+        font-weight: 900;
+        margin-bottom: 18px;
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+
+      th {
+        background: var(--text);
+        color: #fff;
+        text-align: left;
+      }
+
+      th,
+      td {
+        padding: 18px;
+        border-bottom: 1px solid var(--line);
+      }
+
+      .rate {
+        font-size: 30px;
+        font-weight: 950;
+        color: var(--brand-dark);
+      }
+
+      .fine {
+        color: var(--muted);
+        font-size: 13px;
+        line-height: 1.6;
+        font-weight: 650;
+      }
+
+      .card-img {
+        height: 178px;
+      }
+
+      .scenario {
+        padding: 0;
+        overflow: hidden;
+      }
+
+      .scenario-body {
+        padding: 24px;
+      }
+
+      .faq {
+        padding: 22px 24px;
+        margin-bottom: 12px;
+      }
+
+      .footer {
+        padding: 34px 20px;
+        background: var(--soft);
+        border-top: 1px solid var(--line);
+        text-align: center;
+      }
+
+      @media (max-width: 860px) {
+        .bar,
+        .links {
+          display: none;
+        }
+
+        .hero-grid,
+        .split,
+        .grid,
+        .grid.two {
+          grid-template-columns: 1fr;
+        }
+
+        .hero,
+        .section {
+          padding-top: 54px;
+          padding-bottom: 54px;
+        }
+
+        .hero-img {
+          height: 310px;
+        }
+
+        .actions {
+          flex-direction: column;
+        }
+
+        .button {
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root">
+      <div>
+        <header class="top">
+          <div class="wrap bar">
+            <span>Established in 2005 | 60+ banks and lending partners | Branches across Australia</span>
+            <a href="tel:1300688799">Call 1300 688 799</a>
+          </div>
+          <div class="wrap nav">
+            <a class="logo" href="./index.html"><span class="mark">AM</span><span>Award Mortgage</span></a>
+            <nav class="links" aria-label="Primary navigation">
+              <a href="./index.html">Home</a>
+              <div class="nav-item">
+                <a class="nav-trigger" href="#services">Loan Solutions</a>
+                <div class="dropdown" aria-label="Loan Solutions submenu">
+                  <a href="#services">Home Loans</a>
+                  <a href="#services">First-Home-Buyer</a>
+                  <a href="#services">Overseas-Income-Loans</a>
+                  <a href="#services">Self-Employed-Home-Loans</a>
+                </div>
+              </div>
+              <a href="#rates">Refinance</a>
+              <div class="nav-item">
+                <a class="nav-trigger" href="#faqs">Resources</a>
+                <div class="dropdown" aria-label="Resources submenu">
+                  <a href="#faqs">FAQs</a>
+                  <a href="#blog">Articles</a>
+                </div>
+              </div>
+              <a href="#blog">Blog</a>
+              <div class="nav-item">
+                <a class="nav-trigger" href="#about">About</a>
+                <div class="dropdown" aria-label="About submenu">
+                  <a href="#about">About</a>
+                  <a href="#about">Branches</a>
+                </div>
+              </div>
+              <a href="#contact">Contact</a>
+            </nav>
+            <a class="button" href="mailto:info@awardmortgage.com.au">Get Assessment</a>
+          </div>
+        </header>
+
+        <main>
+          <section class="hero">
+            <div class="wrap hero-grid">
+              <div>
+                <span class="eyebrow">Award Mortgage Solutions</span>
+                <h1>Home Loan Solutions for Local and International Clients in Australia</h1>
+                <p class="lead">Award Mortgage helps you compare lender options, review your borrowing position and find a loan solution that fits your income, property goals and financial situation.</p>
+                <div class="actions">
+                  <a class="button" href="mailto:info@awardmortgage.com.au">Get a Loan Assessment</a>
+                  <a class="button secondary" href="tel:1300688799">Call 1300 688 799</a>
+                </div>
+                <div class="stats">
+                  <span class="stat">Established in 2005</span>
+                  <span class="stat">60+ banks and lending partners</span>
+                  <span class="stat">100+ loan professionals</span>
+                  <span class="stat">AUD 20B+ loans facilitated</span>
+                  <span class="stat">Branches across Australia</span>
+                </div>
+              </div>
+              <img class="hero-img" src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1300&q=80" alt="Modern home exterior representing Australian home loan goals" />
+            </div>
+          </section>
+
+          <section id="services" class="section band">
+            <div class="wrap">
+              <h2>Loan Services Designed Around Your Financial Situation</h2>
+              <p class="copy">Residential, specialist and business finance pathways presented in a way that is easy to compare.</p>
+              <div class="grid">
+                <article class="card"><div class="icon">HL</div><h3>Home Loans and Refinancing</h3><p>Buying your first home, upgrading, investing or reviewing your current loan? We help compare lender options and structure your home loan around your borrowing needs.</p></article>
+                <article class="card"><div class="icon">OI</div><h3>Overseas Income Home Loans</h3><p>Earning income outside Australia can make lending more complex. We help international clients and Australian residents with overseas income review lender options and application requirements.</p></article>
+                <article class="card"><div class="icon">CL</div><h3>Construction Loans</h3><p>Building or renovating a property? We help review construction loan options, staged payment requirements and lender policies before your application moves ahead.</p></article>
+                <article class="card"><div class="icon">SF</div><h3>SMSF Loans</h3><p>Looking to purchase property through a self-managed super fund? Our team can help you understand SMSF lending options and key lender requirements.</p></article>
+                <article class="card"><div class="icon">CM</div><h3>Commercial Loans</h3><p>For business premises, commercial property investment or business-related lending, we help compare suitable commercial finance options.</p></article>
+                <article class="card"><div class="icon">AF</div><h3>Asset and Equipment Finance</h3><p>Need finance for vehicles, equipment or business assets? We help assess suitable asset lending options based on your business and repayment position.</p></article>
+              </div>
+            </div>
+          </section>
+
+          <section id="rates" class="section">
+            <div class="wrap split">
+              <div>
+                <h2>Latest Home Loan Interest Rates</h2>
+                <p class="copy">Indicative examples help you start the comparison. A broker review is still needed before relying on any specific rate or product.</p>
+                <a class="button" href="mailto:info@awardmortgage.com.au">Compare Rates with a Broker</a>
+              </div>
+              <div class="table-card">
+                <table>
+                  <thead><tr><th>Client Type</th><th>Interest Rate From</th><th>Comparison Rate From</th></tr></thead>
+                  <tbody>
+                    <tr><td><strong>Local Income</strong></td><td><span class="rate">5.88%</span> p.a.</td><td><strong>6.13% p.a.</strong></td></tr>
+                    <tr><td><strong>Overseas Income</strong></td><td><span class="rate">6.83%</span> p.a.</td><td><strong>7.35% p.a.</strong></td></tr>
+                  </tbody>
+                </table>
+                <p class="fine" style="padding: 18px;">Interest rates are current as at 18/05/2026 and subject to change at any time. The comparison rate is based on a loan of $150,000 over a term of 25 years. Terms, conditions, fees and charges apply.</p>
+              </div>
+            </div>
+          </section>
+
+          <section id="about" class="section dark">
+            <div class="wrap">
+              <h2>Why Choose Award Mortgage</h2>
+              <p class="copy">Award Mortgage has supported clients across Australia since 2005, combining lender access, industry experience and a structured loan process to help clients make informed borrowing decisions.</p>
+              <div class="grid">
+                <article class="card"><h3>Established Credit Service Experience</h3><p>Since 2005, Award Mortgage has supported clients with home loan and finance solutions across Australia.</p></article>
+                <article class="card"><h3>Broad Lender Panel</h3><p>With access to 60+ banks and financial institutions, we help compare lender policies, products and pricing options.</p></article>
+                <article class="card"><h3>Local and International Clients</h3><p>We assist local income clients, overseas income applicants, temporary visa holders, residents, citizens and international borrowers.</p></article>
+                <article class="card"><h3>Australia-Wide Branch Network</h3><p>Our branch network spans key Australian states and cities with local market knowledge and accessible service.</p></article>
+                <article class="card"><h3>Professional Loan Team</h3><p>Loan professionals review income, documents, borrowing capacity and lender fit before an application is submitted.</p></article>
+                <article class="card"><h3>End-to-End Loan Support</h3><p>From first assessment to settlement and ongoing review, we provide support through the full loan journey.</p></article>
+              </div>
+            </div>
+          </section>
+
+          <section class="section">
+            <div class="wrap">
+              <h2>From First Assessment to Loan Settlement</h2>
+              <p class="copy">A clear process helps you understand where you stand, what documents are needed and which lending options may suit your situation.</p>
+              <div class="grid">
+                <article class="card"><h3>1. Tell Us Your Goal</h3><p>Buying, refinancing, building, investing, applying with overseas income or reviewing business finance.</p></article>
+                <article class="card"><h3>2. Review Your Position</h3><p>We review income, deposit, liabilities, property goal, residential status and key documents.</p></article>
+                <article class="card"><h3>3. Compare Lender Options</h3><p>We compare lender options based on policy fit, rate, fees, repayment structure and requirements.</p></article>
+                <article class="card"><h3>4. Prepare Application</h3><p>Our team helps prepare required documents and submit the application to the selected lender.</p></article>
+                <article class="card"><h3>5. Approval and Documents</h3><p>We guide you through conditional approval, valuation, formal approval and loan documents.</p></article>
+                <article class="card"><h3>6. Settlement and Support</h3><p>After settlement, we support loan review, refinance timing and future lending needs.</p></article>
+              </div>
+            </div>
+          </section>
+
+          <section id="blog" class="section band">
+            <div class="wrap">
+              <h2>Real Lending Scenarios, Practical Support</h2>
+              <p class="copy">Every client's situation is different. These examples show how Award Mortgage may help clients review lending options based on income type, property goal and lender requirements.</p>
+              <div class="grid">
+                <article class="card scenario"><img class="card-img" src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=900&q=80" alt="Home exterior" /><div class="scenario-body"><h3>First Home Buyer with Local Income</h3><p>Borrowing capacity review, lender comparison and application preparation.</p></div></article>
+                <article class="card scenario"><img class="card-img" src="https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=900&q=80" alt="Client consultation" /><div class="scenario-body"><h3>Overseas Income Applicant</h3><p>Overseas income review, document guidance and lender policy matching.</p></div></article>
+                <article class="card scenario"><img class="card-img" src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=900&q=80" alt="Finance documents" /><div class="scenario-body"><h3>Refinance for Better Loan Structure</h3><p>Refinance comparison, repayment review and loan structure discussion.</p></div></article>
+              </div>
+            </div>
+          </section>
+
+          <section id="faqs" class="section">
+            <div class="wrap">
+              <h2>FAQs</h2>
+              <p class="copy">Find answers to common questions about home loans, refinancing, overseas income lending and the loan application process in Australia.</p>
+              <div class="grid two">
+                <article class="faq"><h3>How do I know how much I can borrow?</h3><p>Your borrowing capacity depends on income, expenses, liabilities, deposit, property purpose and lender assessment.</p></article>
+                <article class="faq"><h3>Can I get a home loan in Australia with overseas income?</h3><p>Some lenders may consider overseas income, but requirements vary by lender, currency, status, employment type and documentation.</p></article>
+                <article class="faq"><h3>Can temporary visa holders apply?</h3><p>Some temporary visa holders may be eligible depending on visa type, income, deposit, property purpose and lender policy.</p></article>
+                <article class="faq"><h3>Are the interest rates guaranteed?</h3><p>No. Rates are indicative and subject to change. Your actual rate depends on lender assessment and your full financial situation.</p></article>
+              </div>
+            </div>
+          </section>
+
+          <section id="contact" class="section dark">
+            <div class="wrap" style="text-align: center;">
+              <h2>Ready to Review Your Loan Options?</h2>
+              <div class="actions" style="justify-content: center;">
+                <a class="button" href="mailto:info@awardmortgage.com.au">Book a Loan Consultation</a>
+                <a class="button secondary" href="tel:1300688799">Call 1300 688 799</a>
+              </div>
+              <p class="fine" style="max-width: 900px; margin: 28px auto 0; color: rgba(255,255,255,.82);">This information is general in nature and has been prepared without taking into account your objectives, financial situation or needs. Terms, conditions, fees, charges, eligibility criteria and lending criteria apply. Approval is subject to credit assessment.</p>
+            </div>
+          </section>
+        </main>
+
+        <footer class="footer">
+          <strong>Award Mortgage Solutions</strong> | ABN 59 632 593 474 | Australian Credit Licence 387 443
+        </footer>
+      </div>
+    </div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
