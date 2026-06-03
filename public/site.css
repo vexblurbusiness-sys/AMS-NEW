@@ -99,6 +99,12 @@ select:focus-visible {
   color: var(--ink);
 }
 
+.brand-logo {
+  width: 230px;
+  max-width: 42vw;
+  height: auto;
+}
+
 .brand-mark {
   width: 42px;
   height: 42px;
@@ -1595,6 +1601,11 @@ th {
     min-width: 0;
   }
 
+  .brand-logo {
+    width: 206px;
+    max-width: 58vw;
+  }
+
   .menu-button {
     display: inline-grid;
     place-items: center;
@@ -1636,17 +1647,49 @@ th {
 
   .dropdown {
     position: static;
-    display: block;
+    display: none;
+    width: 100%;
     min-width: 0;
-    padding: 0 0 10px 14px;
+    margin: 0 0 12px;
+    padding: 8px;
     transform: none;
-    border: 0;
+    border: 1px solid var(--line);
+    border-radius: 12px;
     box-shadow: none;
-    background: transparent;
+    background: var(--soft);
+    backdrop-filter: none;
+  }
+
+  .nav-group:hover .dropdown,
+  .nav-group:focus-within .dropdown {
+    display: none;
+    animation: none;
+  }
+
+  .nav-group.submenu-open .dropdown {
+    display: grid;
+    gap: 4px;
+    animation: none;
   }
 
   .dropdown a {
-    padding: 10px 0;
+    min-height: 44px;
+    justify-content: flex-start;
+    padding: 10px 12px;
+    border-radius: 10px;
+    white-space: normal;
+  }
+
+  .dropdown a::after {
+    content: none;
+  }
+
+  .dropdown a:hover {
+    background: var(--white);
+  }
+
+  .nav-group.submenu-open .nav-trigger::after {
+    transform: translateY(2px) rotate(225deg);
   }
 
   .hero-grid,

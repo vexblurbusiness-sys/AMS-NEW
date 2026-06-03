@@ -1,0 +1,36 @@
+<svg width="1200" height="840" viewBox="0 0 1200 840" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Financial planning notes and calculator</title>
+  <desc id="desc">A refined refinance planning scene with loan documents, charts, a calculator and warm orange accents.</desc>
+  <rect width="1200" height="840" fill="#f6f2ed"/>
+  <rect x="0" y="0" width="1200" height="840" fill="url(#bg)"/>
+  <circle cx="988" cy="132" r="186" fill="#f08519" opacity="0.12"/>
+  <circle cx="175" cy="686" r="220" fill="#151922" opacity="0.06"/>
+  <rect x="168" y="122" width="680" height="560" rx="28" fill="#ffffff" stroke="#e4e7ec" stroke-width="3"/>
+  <rect x="214" y="180" width="316" height="28" rx="14" fill="#151922"/>
+  <rect x="214" y="236" width="535" height="18" rx="9" fill="#d9dee7"/>
+  <rect x="214" y="278" width="455" height="18" rx="9" fill="#d9dee7"/>
+  <rect x="214" y="338" width="188" height="144" rx="18" fill="#fff3e8" stroke="#f08519" stroke-width="3"/>
+  <path d="M252 435L289 389L324 413L365 360" stroke="#b9540b" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="452" y="338" width="296" height="28" rx="14" fill="#151922" opacity="0.9"/>
+  <rect x="452" y="390" width="258" height="18" rx="9" fill="#d9dee7"/>
+  <rect x="452" y="430" width="220" height="18" rx="9" fill="#d9dee7"/>
+  <rect x="214" y="536" width="530" height="20" rx="10" fill="#d9dee7"/>
+  <rect x="214" y="582" width="440" height="20" rx="10" fill="#d9dee7"/>
+  <rect x="760" y="284" width="280" height="360" rx="26" fill="#151922"/>
+  <rect x="794" y="324" width="212" height="74" rx="14" fill="#ffffff"/>
+  <rect x="804" y="430" width="44" height="44" rx="10" fill="#f08519"/>
+  <rect x="870" y="430" width="44" height="44" rx="10" fill="#eef2f7"/>
+  <rect x="936" y="430" width="44" height="44" rx="10" fill="#eef2f7"/>
+  <rect x="804" y="496" width="44" height="44" rx="10" fill="#eef2f7"/>
+  <rect x="870" y="496" width="44" height="44" rx="10" fill="#f08519"/>
+  <rect x="936" y="496" width="44" height="44" rx="10" fill="#eef2f7"/>
+  <rect x="804" y="562" width="176" height="46" rx="12" fill="#f08519"/>
+  <path d="M1030 204C986 196 958 174 948 139C981 148 1010 170 1030 204Z" fill="#f08519"/>
+  <path d="M1005 220C963 216 930 195 908 158" stroke="#151922" stroke-width="18" stroke-linecap="round"/>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1200" y2="840" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#f3f6fb"/>
+    </linearGradient>
+  </defs>
+</svg>

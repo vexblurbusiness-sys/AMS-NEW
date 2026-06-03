@@ -5,8 +5,38 @@ if (menuButton && navLinks) {
   menuButton.addEventListener("click", () => {
     const isOpen = navLinks.classList.toggle("open");
     menuButton.setAttribute("aria-expanded", String(isOpen));
+
+    if (!isOpen) {
+      document.querySelectorAll(".nav-group.submenu-open").forEach((group) => {
+        group.classList.remove("submenu-open");
+        group.querySelector(".nav-trigger")?.setAttribute("aria-expanded", "false");
+      });
+    }
   });
 }
+
+document.querySelectorAll(".nav-group .nav-trigger").forEach((trigger) => {
+  trigger.setAttribute("aria-expanded", "false");
+
+  trigger.addEventListener("click", (event) => {
+    const isMobileMenu = window.matchMedia("(max-width: 980px)").matches;
+    const group = trigger.closest(".nav-group");
+
+    if (!isMobileMenu || !navLinks?.classList.contains("open") || !group) return;
+
+    event.preventDefault();
+
+    document.querySelectorAll(".nav-group.submenu-open").forEach((openGroup) => {
+      if (openGroup !== group) {
+        openGroup.classList.remove("submenu-open");
+        openGroup.querySelector(".nav-trigger")?.setAttribute("aria-expanded", "false");
+      }
+    });
+
+    const isOpen = group.classList.toggle("submenu-open");
+    trigger.setAttribute("aria-expanded", String(isOpen));
+  });
+});
 
 document.querySelectorAll(".faq-question").forEach((button) => {
   button.addEventListener("click", () => {
