@@ -1041,6 +1041,217 @@ h3 {
     var(--white);
 }
 
+.stat-strip {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 30px;
+}
+
+.stat-item {
+  padding: 18px;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.78);
+  backdrop-filter: blur(16px);
+}
+
+.stat-item strong {
+  display: block;
+  color: var(--ink);
+  font-size: 28px;
+  line-height: 1;
+  margin-bottom: 8px;
+}
+
+.stat-item span {
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 850;
+}
+
+.calculator-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 340px;
+  gap: 28px;
+  align-items: start;
+}
+
+.calc-panel {
+  display: grid;
+  gap: 24px;
+  padding: 30px;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: var(--white);
+  box-shadow: var(--shadow);
+}
+
+.calc-form {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.calc-result {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.result-tile {
+  min-height: 132px;
+  padding: 20px;
+  border: 1px solid rgba(240, 133, 25, 0.26);
+  border-radius: 14px;
+  background:
+    linear-gradient(135deg, rgba(240, 133, 25, 0.16), transparent 50%),
+    var(--brand-soft);
+}
+
+.result-tile strong {
+  display: block;
+  color: var(--brand-dark);
+  font-size: 26px;
+  line-height: 1.05;
+  margin-bottom: 8px;
+}
+
+.result-tile span {
+  color: var(--text);
+  font-size: 13px;
+  line-height: 1.45;
+  font-weight: 800;
+}
+
+.helper-note {
+  padding: 16px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--soft);
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.62;
+  font-weight: 650;
+}
+
+.article-shell {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 320px;
+  gap: 36px;
+  align-items: start;
+}
+
+.article-content {
+  padding: 44px;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: var(--white);
+  box-shadow: var(--shadow);
+}
+
+.article-content h2 {
+  margin-top: 42px;
+  font-size: clamp(28px, 3.2vw, 40px);
+}
+
+.article-content h2:first-child {
+  margin-top: 0;
+}
+
+.article-content p,
+.article-content li {
+  color: var(--text);
+  font-size: 17px;
+  line-height: 1.72;
+  font-weight: 610;
+}
+
+.article-content ul,
+.article-content ol {
+  display: grid;
+  gap: 10px;
+  padding-left: 22px;
+}
+
+.toc-panel {
+  position: sticky;
+  top: 110px;
+  padding: 24px;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: var(--soft);
+}
+
+.toc-panel a {
+  display: block;
+  padding: 11px 0;
+  border-bottom: 1px solid var(--line);
+  color: var(--ink);
+  font-weight: 800;
+}
+
+.toc-panel a:last-child {
+  border-bottom: 0;
+}
+
+.legal-grid {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 24px;
+}
+
+.legal-card {
+  padding: 28px;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: var(--white);
+}
+
+.logo-strip {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.logo-chip {
+  min-height: 46px;
+  display: inline-flex;
+  align-items: center;
+  padding: 0 14px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: var(--white);
+  color: var(--ink);
+  font-size: 13px;
+  font-weight: 900;
+}
+
+.sticky-cta {
+  position: fixed;
+  left: 50%;
+  bottom: 18px;
+  z-index: 40;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  padding: 10px;
+  border: 1px solid rgba(228, 231, 236, 0.92);
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.88);
+  box-shadow: 0 18px 44px rgba(21, 25, 34, 0.16);
+  transform: translateX(-50%);
+  backdrop-filter: blur(18px);
+}
+
+.sticky-cta span {
+  padding: 0 10px;
+  color: var(--ink);
+  font-size: 13px;
+  font-weight: 900;
+  white-space: nowrap;
+}
+
 .profile-card {
   display: grid;
   grid-template-columns: 72px 1fr;
@@ -1444,6 +1655,11 @@ th {
   .blog-layout,
   .contact-grid,
   .form-grid,
+  .calculator-layout,
+  .calc-form,
+  .calc-result,
+  .article-shell,
+  .legal-grid,
   .decision-grid,
   .matrix-row,
   .journey,
@@ -1540,6 +1756,23 @@ th {
 
   .meta-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .stat-strip {
+    grid-template-columns: 1fr;
+  }
+
+  .article-content,
+  .calc-panel {
+    padding: 24px;
+  }
+
+  .sticky-cta {
+    left: 14px;
+    right: 14px;
+    bottom: 12px;
+    transform: none;
+    justify-content: space-between;
   }
 
   .section {

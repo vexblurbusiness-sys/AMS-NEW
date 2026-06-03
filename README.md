@@ -1,14 +1,27 @@
 # Award Mortgage Solutions Website
 
-React and Vite website for Award Mortgage Solutions, covering home loans, refinancing, specialist lending scenarios, resources and lead enquiries.
+Static GitHub Pages website for Award Mortgage Solutions.
 
-## Run Locally
+## Upload
 
-**Prerequisites:** Node.js and npm
+Upload the contents of `github-upload-ready-v2` to the GitHub repository root, then publish GitHub Pages from the `main` branch and `/ (root)` folder.
 
-1. Install dependencies:
-   `npm install`
-2. Run the app:
-   `npm run dev`
-3. Build for production:
-   `npm run build`
+## Main Pages
+
+- Home
+- Loan Solutions
+- Refinance
+- Resources
+- Blog
+- About
+- Contact
+
+## Resource Pages
+
+- FAQs
+- Articles
+- Calculators
+- Document Checklists
+- Rate Review Centre
+- Home Equity Planning
+- Credit Guide and Important Information

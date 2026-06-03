@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Mortgage calculators from Award Mortgage Solutions for repayments, borrowing conversations and refinance savings preparation." />
+    <meta name="theme-color" content="#f08519" />
+    <title>Mortgage Calculators | Award Mortgage Solutions</title>
+    <link rel="preconnect" href="https://images.unsplash.com" />
+    <link rel="preconnect" href="https://api.iconify.design" />
+    <link rel="stylesheet" href="../../public/site.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="shell topbar"><span>Established in 2005 | 60+ banks and lending partners | Branches across Australia</span><a href="tel:1300688799">Call 1300 688 799</a></div>
+      <div class="shell nav">
+        <a class="brand" href="../../"><span class="brand-mark">AM</span><span>Award Mortgage</span></a>
+        <button class="menu-button" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="primary-navigation">&#9776;</button>
+        <nav class="nav-links" id="primary-navigation" aria-label="Primary navigation">
+          <a class="nav-link" href="../../">Home</a>
+          <div class="nav-group"><a class="nav-trigger" href="../../loan-solutions/">Loan Solutions</a><div class="dropdown"><a href="../../loan-solutions/home-loans/">Home Loans</a><a href="../../loan-solutions/first-home-buyer/">First-Home-Buyer</a><a href="../../loan-solutions/overseas-income-loans/">Overseas-Income-Loans</a><a href="../../loan-solutions/self-employed-home-loans/">Self-Employed-Home-Loans</a></div></div>
+          <a class="nav-link" href="../../refinance/">Refinance</a>
+          <div class="nav-group"><a class="nav-trigger active" href="../">Resources</a><div class="dropdown"><a href="../faqs/">FAQs</a><a href="../articles/">Articles</a></div></div>
+          <a class="nav-link" href="../../blog/">Blog</a>
+          <div class="nav-group"><a class="nav-trigger" href="../../about/">About</a><div class="dropdown"><a href="../../about/">About</a><a href="../../about/branches/">Branches</a></div></div>
+          <a class="nav-link" href="../../contact/">Contact</a>
+        </nav>
+        <a class="nav-cta" href="../../contact/">Get Assessment</a>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero compact">
+        <div class="shell hero-grid">
+          <div class="reveal">
+            <div class="breadcrumb"><a href="../../">Home</a><span>/</span><a href="../">Resources</a><span>/</span><span>Calculators</span></div>
+            <span class="eyebrow">Mortgage Calculators</span>
+            <h1>Estimate Repayments and Prepare Better Questions</h1>
+            <p class="lead">Use these tools to understand the numbers you may want to discuss before a formal lender assessment.</p>
+            <div class="actions"><a class="button" href="#repayments">Calculate repayments</a><a class="button secondary" href="../../contact/">Speak with a broker</a></div>
+          </div>
+          <div class="hero-media reveal"><div class="hero-card"><img src="https://images.unsplash.com/photo-1554224154-26032ffc0d07?auto=format&fit=crop&w=1200&q=80" alt="Calculator, notebook and home loan documents" /></div></div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="shell calculator-layout">
+          <div class="grid" style="gap: 28px;">
+            <article class="calc-panel reveal" id="repayments">
+              <div>
+                <span class="pill">Repayment estimate</span>
+                <h2>Mortgage Repayment Calculator</h2>
+                <p class="section-copy">Enter a loan amount, interest rate and term to estimate monthly and fortnightly principal-and-interest repayments.</p>
+              </div>
+              <form class="calc-form" data-calculator="repayments">
+                <div class="field"><label for="amount">Loan Amount</label><input id="amount" name="amount" type="number" min="0" value="750000" /></div>
+                <div class="field"><label for="rate">Interest Rate</label><input id="rate" name="rate" type="number" min="0" step="0.01" value="6.25" /></div>
+                <div class="field"><label for="years">Loan Term</label><input id="years" name="years" type="number" min="1" max="40" value="30" /></div>
+                <div class="field"><label for="repayment-purpose">Loan Purpose</label><select id="repayment-purpose" name="purpose"><option>Owner occupied</option><option>Investment</option><option>Refinance</option></select></div>
+              </form>
+              <div class="calc-result">
+                <div class="result-tile"><strong data-result="monthly">$0</strong><span>Estimated monthly repayment</span></div>
+                <div class="result-tile"><strong data-result="fortnightly">$0</strong><span>Estimated fortnightly repayment</span></div>
+                <div class="result-tile"><strong data-result="interest">$0</strong><span>Estimated interest over the selected term</span></div>
+              </div>
+              <p class="helper-note">This is a general estimate for planning purposes only. It does not include lender fees, government charges, offset use, repayment changes or eligibility assessment.</p>
+            </article>
+
+            <article class="calc-panel reveal" id="borrowing">
+              <div>
+                <span class="pill">Borrowing conversation</span>
+                <h2>Borrowing Capacity Preparation</h2>
+                <p class="section-copy">Use this as a conversation starter to understand how income, living costs and existing repayments can affect borrowing discussions.</p>
+              </div>
+              <form class="calc-form" data-calculator="borrowing">
+                <div class="field"><label for="income">Annual Gross Income</label><input id="income" name="income" type="number" min="0" value="160000" /></div>
+                <div class="field"><label for="expenses">Monthly Living Costs</label><input id="expenses" name="expenses" type="number" min="0" value="4200" /></div>
+                <div class="field"><label for="debts">Monthly Debt Repayments</label><input id="debts" name="debts" type="number" min="0" value="650" /></div>
+                <div class="field"><label for="borrow-rate">Assessment Rate</label><input id="borrow-rate" name="rate" type="number" min="0" step="0.01" value="8.25" /></div>
+                <div class="field full-span"><label for="borrow-years">Loan Term</label><input id="borrow-years" name="years" type="number" min="1" max="40" value="30" /></div>
+              </form>
+              <div class="calc-result">
+                <div class="result-tile"><strong data-result="range">$0</strong><span>Indicative conversation range</span></div>
+                <div class="result-tile"><strong data-result="monthly-buffer">$0</strong><span>Estimated monthly repayment room</span></div>
+                <div class="result-tile"><strong data-result="assessment-rate">0%</strong><span>Rate used in this preparation estimate</span></div>
+              </div>
+              <p class="helper-note">Borrowing capacity is assessed differently by each lender. A formal review may consider tax, dependants, credit history, loan purpose, repayment type, buffers and lender policy.</p>
+            </article>
+
+            <article class="calc-panel reveal" id="refinance">
+              <div>
+                <span class="pill">Refinance review</span>
+                <h2>Refinance Savings Estimate</h2>
+                <p class="section-copy">Compare your current rate with a new rate to prepare for a refinance conversation.</p>
+              </div>
+              <form class="calc-form" data-calculator="refinance">
+                <div class="field"><label for="balance">Current Loan Balance</label><input id="balance" name="balance" type="number" min="0" value="680000" /></div>
+                <div class="field"><label for="currentRate">Current Rate</label><input id="currentRate" name="currentRate" type="number" min="0" step="0.01" value="6.85" /></div>
+                <div class="field"><label for="newRate">New Rate</label><input id="newRate" name="newRate" type="number" min="0" step="0.01" value="6.15" /></div>
+                <div class="field"><label for="refi-years">Remaining Term</label><input id="refi-years" name="years" type="number" min="1" max="40" value="27" /></div>
+                <div class="field full-span"><label for="costs">Estimated Switching Costs</label><input id="costs" name="costs" type="number" min="0" value="1200" /></div>
+              </form>
+              <div class="calc-result">
+                <div class="result-tile"><strong data-result="saving">$0</strong><span>Estimated monthly repayment difference</span></div>
+                <div class="result-tile"><strong data-result="annual-saving">$0</strong><span>Estimated annual repayment difference</span></div>
+                <div class="result-tile"><strong data-result="payback">Review costs</strong><span>Approximate time to recover switching costs</span></div>
+              </div>
+              <p class="helper-note">A refinance decision should also consider features, fees, break costs, loan term, cashback conditions, valuation outcome and whether the loan structure still suits your goal.</p>
+            </article>
+          </div>
+
+          <aside class="aside-panel reveal">
+            <h3>Use the numbers carefully</h3>
+            <p>Calculators are helpful for preparation, but they cannot confirm eligibility, lender policy or final approval.</p>
+            <a href="../checklists/">Document checklist</a>
+            <a href="../rate-centre/">Rate review centre</a>
+            <a href="https://moneysmart.gov.au/home-loans/mortgage-calculator" target="_blank" rel="noreferrer">Moneysmart calculator</a>
+            <a href="../../contact/">Ask Award Mortgage</a>
+          </aside>
+        </div>
+      </section>
+
+      <section class="section soft">
+        <div class="shell cta-panel reveal">
+          <h2>Want These Numbers Reviewed Properly?</h2>
+          <p>Send your loan goal, income type and estimated figures so the team can help you understand realistic next steps.</p>
+          <a class="button" href="../../contact/">Request Assessment</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="shell footer-grid">
+        <div><a class="brand" href="../../"><span class="brand-mark">AM</span><span>Award Mortgage</span></a><p>Award Mortgage Solutions ABN 59 632 593 474. Australian Credit Licence 387 443.</p></div>
+        <div><h3>Solutions</h3><a href="../../loan-solutions/home-loans/">Home Loans</a><a href="../../loan-solutions/first-home-buyer/">First-Home-Buyer</a><a href="../../loan-solutions/overseas-income-loans/">Overseas-Income-Loans</a></div>
+        <div><h3>Resources</h3><a href="../faqs/">FAQs</a><a href="../articles/">Articles</a><a href="./">Calculators</a><a href="../checklists/">Checklists</a><a href="../credit-guide/">Credit Guide</a></div>
+        <div><h3>Contact</h3><a href="tel:1300688799">1300 688 799</a><a href="mailto:info@awardmortgage.com.au">info@awardmortgage.com.au</a><a href="../../about/branches/">Branches</a></div>
+      </div>
+      <div class="shell footer-bottom">General information only. Terms, conditions, fees, charges, eligibility criteria and lending criteria apply.</div>
+    </footer>
+    <div class="sticky-cta"><span>Need a tailored review?</span><a class="button" href="../../contact/">Get Assessment</a></div>
+    <script src="../../public/site.js" defer></script>
+  </body>
+</html>
